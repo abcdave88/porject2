@@ -1,6 +1,6 @@
 class Instrument < ActiveRecord::Base
   has_many :people 
 
-  validates :type_of, presence: true
+  validates :instrument_type, presence: true
 
 end
