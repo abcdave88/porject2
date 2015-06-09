@@ -1,0 +1,14 @@
+<%= form_for @band do |form| %>
+  
+  
+  <% @people.each do |person| %>
+   <%= check_box_tag "band[person_ids][]", person.id %>
+   <%= person.name %>
+  <% end %>
+
+  <%= form.label :name  %>
+  <%= form.text_field :name %>
+
+  <%= form.submit 'Submit' %>
+  
+<% end %>

@@ -1,0 +1,27 @@
+
+
+  <%= form_for @person do |form| %>
+  
+  <% @instruments.each do |instrument| %>
+   <%= check_box_tag "person[instrument_ids][]", instrument.id %>
+   <%= instrument.instrument_type %>
+  <% end %>
+
+  <%= form.label :instrument %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :age %>
+  <%= form.text_field :age %>
+
+  <%= form.label :location %>
+  <%= form.text_field :location %>
+
+  <%= form.label :contact %>
+  <%= form.text_field :contact %>
+
+  <%= form.submit 'Submit' %>
+
+<% end %>
+

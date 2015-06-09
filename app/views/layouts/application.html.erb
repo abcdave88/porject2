@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <ul>
+        <li><%= link_to "Create New Person", new_person_path %> </li>
+        <li><%= link_to "Cant Find Your Instrument?", new_instrument_path %></li>
+        <li><%= link_to "Create New Band", new_band_path %></li>
+        <li><%= %></li>
+        <li><%= %></li>
+    </ul>
+  </header>
 
 <%= yield %>
 
