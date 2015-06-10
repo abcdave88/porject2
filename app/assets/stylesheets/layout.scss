@@ -3,7 +3,7 @@
 
 body{
   font-family: 'Nunito';
-  background-color: rgb(70, 159, 238);
+  background-color: #929191;
 }
 
 .container {
@@ -84,6 +84,19 @@ body{
   padding-top: 25px;
 }
 
+.item4{
+  color: black;
+  background:#e6db74;
+  border: 1px solid #e6db74;
+  padding: 16px;
+  padding-top: 16px;
+  transition: padding-top 0.2s;
+}
+
+.item4:hover {
+  padding-top: 25px;
+}
+
 
 .content{
   width: 70%;
@@ -155,6 +168,18 @@ label{
 
 .new-instrument-field .submit {
   padding: 40px;
+}
+
+.home-bands {
+  display: block;
+  border-bottom: 1px solid white;
+  padding: 20px;
+  text-align: center
+}
+
+.band-links{
+  text-decoration: none;
+  color:#929191;   
 }
 
 

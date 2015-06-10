@@ -1,0 +1,9 @@
+
+<div class="home-bands">
+<h2>Find A Jam Bands</h2>
+  <%@bands.each do |band|  %>
+    <li><%= link_to(band.name, band_path(band.id),class: 'band-links') %> </li>
+  <% end %>
+<p>Just a few of the many world class acts to have met on Find A Jam!</p>
+</div>
+

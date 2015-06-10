@@ -31,7 +31,6 @@ class PeopleController < ApplicationController
 
   def update
     @person = Person.find(params[:id])
-     binding.pry
     @person.update(person_params)
     redirect_to(root_path)
   end

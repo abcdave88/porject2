@@ -17,11 +17,13 @@
     <div class="nav">
       <header>
         <ul>
-           
-            <li><%= link_to " Add Musician", new_person_path, class: "menu item1" %> </li>
+            <li><%= link_to "Home", root_path, class: "menu item1" %></li>
+
+            <li><%= link_to " Add Musician", new_person_path, class: "menu item2" %> </li>
        
-            <li><%= link_to "Add Band", new_band_path, class: "menu item2" %></li>
-            <li><%= link_to "Search", search_find_path, class: "menu item3" %></li>
+            <li><%= link_to "Add Band", new_band_path, class: "menu item3" %></li>
+
+            <li><%= link_to "Search", search_find_path, class: "menu item4" %></li>
             <li><%= %></li>
         </ul>
       </header>
