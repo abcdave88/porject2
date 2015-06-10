@@ -1,10 +1,9 @@
-$background: #222;
-$text: white;
-$border: #929191;
+
 
 
 body{
-  background-color: #929191;
+  font-family: 'Nunito';
+  background-color: rgb(70, 159, 238);
 }
 
 .container {
@@ -17,7 +16,7 @@ body{
 
 .head-wrap {
   height: 10%;
-  border: 1px solid white;
+  border-bottom: 10px solid rgb(70, 159, 238);
 }
 
 .head-wrap h1 {
@@ -32,18 +31,130 @@ body{
   text-align: center;
 }
 
+.nav ul {
+  margin-left: -32px;
+}
 .head-wrap li{
   display: inline;
 }
 
 .menu {
   text-decoration: none;
-  color: #929191;
+  // color: #929191;
   text-align: center;
+  margin-right: -4px;
 }
+
+.item1{
+  color: white;
+  border: 1px solid rgb(70, 159, 238);
+  background-color:rgb(70, 159, 238);
+  padding: 16px;
+  padding-top: 16px;
+  transition: padding-top 0.2s;
+}
+
+.item1:hover{
+  padding-top: 25px;
+}
+ 
+.item2{
+  color: black;
+  background-color: #ae81ff;
+  border: 1px solid #ae81ff;
+  padding: 16px;
+  padding-top: 16px;
+  transition: padding-top 0.2s;
+}
+
+.item2:hover {
+  padding-top: 25px;
+}
+
+.item3{
+  color: black;
+  background: #ffab1d;
+  border: 1px solid #ffab1d;
+  padding: 16px;
+  padding-top: 16px;
+  transition: padding-top 0.2s;
+}
+
+.item3:hover {
+  padding-top: 25px;
+}
+
 
 .content{
   width: 70%;
-  padding-bottom: 90%;
+  padding-bottom: 30%;
+  color: #929191;
+  border-left: 10px solid white;
+  border-right: 10px solid white;
+  margin: 0 auto;
+}
+
+.new-person{
+  width: 100%;
+  height: 100%;
+}
+
+.new-person .instrument-select{
+  display: block;
+  border-bottom: 1px solid white;
+  padding: 20px;
+}
+
+.new-instrument{
+  text-decoration: none;
+  color:#929191;
+  font-size: 11px;
+}
+
+.new-person .person-field{
+  display: block;
+  border-top: 1px solid white;
+}
+
+.new-person .person-field .field {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.submit{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  height: 35px;
   color: white;
 }
+
+.submit input{
+  background-color: #929191;
+}
+label{
+  display: block;
+}
+
+.new-instrument-field{
+  display: block;
+  border: 1px solid white;
+  width: 89%;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.new-instrument-field label {
+  padding: 40px;
+}
+
+
+.new-instrument-field .submit {
+  padding: 40px;
+}
+
+

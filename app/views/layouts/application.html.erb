@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>MuscianFinderApp</title>
+  <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,15 +11,17 @@
 <body>
 
 <div class="container">
+  
   <div class="head-wrap">
   <h1>Find a Jam</h1>
     <div class="nav">
       <header>
         <ul>
-            <li><%= link_to "Create New Person", new_person_path, class: "menu" %> </li>
-            <li><%= link_to "Cant Find Your Instrument?", new_instrument_path, class: "menu" %></li>
-            <li><%= link_to "Create New Band", new_band_path, class: "menu" %></li>`
-            <li><%= link_to "Search", search_find_path, class: "menu" %></li>
+           
+            <li><%= link_to " Add Musician", new_person_path, class: "menu item1" %> </li>
+       
+            <li><%= link_to "Add Band", new_band_path, class: "menu item2" %></li>
+            <li><%= link_to "Search", search_find_path, class: "menu item3" %></li>
             <li><%= %></li>
         </ul>
       </header>

@@ -1,27 +1,37 @@
 
+  <div class="new-person">
+    <div class="instrument-select">
+    <h3>Select Instruments </h3>
+      <%= form_for @person do |form| %>
+      <% @instruments.each do |instrument| %>
+       <%= check_box_tag "person[instrument_ids][]", instrument.id %>
+       <%= instrument.instrument_type %>
+      <% end %>
 
-  <%= form_for @person do |form| %>
-  
-  <% @instruments.each do |instrument| %>
-   <%= check_box_tag "person[instrument_ids][]", instrument.id %>
-   <%= instrument.instrument_type %>
+     <li><%= link_to "Cant Find Your Instrument?", new_instrument_path, class: "new-instrument" %></li>
+
+    </div>
+    
+    <div class="person-field">
+     <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+     </div>
+     <div class="field">  
+      <%= form.label :age %>
+      <%= form.text_field :age %>
+     </div>
+    <div class="field"> 
+      <%= form.label :location %>
+      <%= form.text_field :location%>
+    </div>
+    <div class="field"> 
+      <%= form.label :contact %>
+      <%= form.text_field :contact %>
+    </div>
+     <div class="submit">
+    <%= form.submit 'Submit' %>
+
   <% end %>
-
-  <%= form.label :instrument %>
-
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-
-  <%= form.label :age %>
-  <%= form.text_field :age %>
-
-  <%= form.label :location %>
-  <%= form.text_field :location %>
-
-  <%= form.label :contact %>
-  <%= form.text_field :contact %>
-
-  <%= form.submit 'Submit' %>
-
-<% end %>
-
+  </div>
+</div>

@@ -1,8 +1,9 @@
+<div class="new-instrument-field">
 <%= form_for @instruments do |form| %>
-  
   <%= form.label :instrument_type  %>
   <%= form.text_field :instrument_type %>
-
+  <div class="submit">
   <%= form.submit 'Submit' %>
-  
+  </div>
 <% end %>
+</div>
