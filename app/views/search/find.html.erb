@@ -1,14 +1,11 @@
 <h1>this is the search page</h1>
-
-<% @data_tables.map do |dt|  %>
-  <br>
-  <%= dt %>
-  <% end %>
-  <br>
+  
+  <%= collection_select(:instrument, :instrument_id, Instrument.all, :id, :instrument_type) %>
 
 
-  ActiveRecord::Base.connection.tables.map do |model|
-  model.capitalize.singularize.camelize
-end
+  <%= collection_select(:person, :person_id, Person.select(:location).uniq, :id, :location) %>
+  
 
-ActiveRecord::Base.send(:subclasses).map(&:name)
+
+
+ 

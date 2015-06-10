@@ -37,7 +37,7 @@ class PeopleController < ApplicationController
   end
 
   private
-  def planet_params
+  def person_params
      params.require(:person).permit(:name, :age, :location, :contact, {instrument_ids:[]})
   end  
 end
