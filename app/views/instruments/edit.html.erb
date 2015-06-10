@@ -1,0 +1,9 @@
+<h2>Edit Instrument</h2>
+
+<%= form_for @instrument do |i| %>
+
+  <%= i.label :instrument_type %>
+  <%= i.text_field :instrument_type %>
+  
+  <%= i.submit 'Update Instrument' %>
+<% end %>

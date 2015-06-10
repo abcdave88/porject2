@@ -1,0 +1,18 @@
+<h2>Edit Band</h2>
+
+<%= form_for @band do |b| %>
+
+  <% @people.each do |person| %>
+    <%= check_box_tag "band[person_ids][]", person.id, @band.person_ids.include?(person.id) %>
+    <%= person.name %>
+  <% end %>
+
+  <%= b.label :name  %>
+  <%= b.text_field :name %>
+  
+
+  <%= b.submit "Update Band"%>
+
+  <% end %>
+
+  <li><%= link_to('Delete Band', band_path(@band.id), method: :delete)%></li>

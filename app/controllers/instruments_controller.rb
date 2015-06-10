@@ -13,4 +13,19 @@ class InstrumentsController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @instrument = Instrument.find(params[:id])
+  end 
+
+  def update
+    @instrument = Instrument.find(params[:id])
+    @instrument.update(person_params)
+    redirect_to(root_path)
+  end
+
+private
+  def instrument_params
+     params.require(:instrument).permit(:instrument_type)
+  end  
 end

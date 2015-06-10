@@ -17,4 +17,27 @@ class BandsController < ApplicationController
   def show
     @band = Band.find(params[:id])
   end
+
+  def edit
+    @band = Band.find(params[:id])
+    @people = Person.all
+    @instrument = Instrument.all
+  end
+
+  def update
+    @band = Band.find(params[:id])
+    @band.update(band_params)
+    redirect_to(root_path)
+  end
+
+  def destroy
+    @band = Band.find(params[:id])
+    @band.destroy
+    redirect_to(root_path)
+  end
+ 
+  private
+  def band_params
+     params.require(:band).permit(:name,{person_ids:[]})
+  end  
 end

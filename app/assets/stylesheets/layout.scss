@@ -1,0 +1,49 @@
+$background: #222;
+$text: white;
+$border: #929191;
+
+
+body{
+  background-color: #929191;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: #222;
+}
+
+
+.head-wrap {
+  height: 10%;
+  border: 1px solid white;
+}
+
+.head-wrap h1 {
+  font-family: 'Monoton';
+  color: #AE81FF;
+  font-size: 40px;
+  font-size: 60px;
+  text-align: center
+}
+
+.nav {
+  text-align: center;
+}
+
+.head-wrap li{
+  display: inline;
+}
+
+.menu {
+  text-decoration: none;
+  color: #929191;
+  text-align: center;
+}
+
+.content{
+  width: 70%;
+  padding-bottom: 90%;
+  color: #222;
+}

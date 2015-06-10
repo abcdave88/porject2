@@ -2,22 +2,33 @@
 <html>
 <head>
   <title>MuscianFinderApp</title>
+  <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <ul>
-        <li><%= link_to "Create New Person", new_person_path %> </li>
-        <li><%= link_to "Cant Find Your Instrument?", new_instrument_path %></li>
-        <li><%= link_to "Create New Band", new_band_path %></li>
-        <li><%= %></li>
-        <li><%= %></li>
-    </ul>
-  </header>
 
-<%= yield %>
+<div class="container">
+  <div class="head-wrap">
+  <h1>Find a Jam</h1>
+    <div class="nav">
+      <header>
+        <ul>
+            <li><%= link_to "Create New Person", new_person_path, class: "menu" %> </li>
+            <li><%= link_to "Cant Find Your Instrument?", new_instrument_path, class: "menu" %></li>
+            <li><%= link_to "Create New Band", new_band_path, class: "menu" %></li>`
+            <li><%= link_to "Search", class: "menu" %></li>
+            <li><%= %></li>
+        </ul>
+      </header>
+    </div>
+  </div>
 
+   
+  <div class="content">
+    <%= yield %>
+  </div>
+</div>
 </body>
 </html>

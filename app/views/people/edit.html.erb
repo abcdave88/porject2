@@ -1,0 +1,29 @@
+<h2>Edit Person</h2> 
+
+<%= form_for @person do |p| %>
+
+  <% @instruments.each do |instrument| %>
+   <%= check_box_tag "person[instrument_ids][]", instrument.id, @person.instrument_ids.include?(instrument.id) %>
+   <%= instrument.instrument_type %>
+  <% end %>
+
+  <%= p.label :instrument %>
+
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+
+  <%=p.label :age %>
+  <%=p.text_field :age %>
+
+  <%=p.label :location %>
+  <%=p.text_field :location %>
+
+  <%=p.label :contact %>
+  <%=p.text_field :contact %>
+
+  <%=p.submit 'Update person!' %>
+<%end%>  
+
+<li><%= link_to('Delete Person', person_path(@person), method: :delete)%></li>
+
+ 
