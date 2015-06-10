@@ -1,0 +1,14 @@
+<h1>this is the search page</h1>
+
+<% @data_tables.map do |dt|  %>
+  <br>
+  <%= dt %>
+  <% end %>
+  <br>
+
+
+  ActiveRecord::Base.connection.tables.map do |model|
+  model.capitalize.singularize.camelize
+end
+
+ActiveRecord::Base.send(:subclasses).map(&:name)
