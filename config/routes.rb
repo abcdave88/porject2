@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get 'search/find'
+  post 'search/find'
   get 'search/results'
   # You can have the root of your site routed with "root"
   root 'home#index'

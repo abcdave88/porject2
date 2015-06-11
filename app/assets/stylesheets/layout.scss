@@ -105,6 +105,8 @@ body{
   border-left: 10px solid white;
   border-right: 10px solid white;
   margin: 0 auto;
+  text-align: center;
+
 }
 
 .new-person{
@@ -182,4 +184,14 @@ label{
   color:#929191;   
 }
 
+.band-show{
+  padding: 20px;
+}
 
+.musician-select{
+  padding: 60px;
+}
+
+.search{
+  padding: 20px;
+}

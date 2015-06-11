@@ -1,1 +1,11 @@
-<h2>This is the band show page</h2>
+<div class="band-show">
+
+<h2><%= @band.name %></h2>
+<div class="members">
+<h3>Members</h3>
+
+<% @band.people.each do |b| %>
+<p><%= b.name %></p>
+<% end %>
+</div>
+</div>

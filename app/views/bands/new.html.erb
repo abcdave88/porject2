@@ -1,14 +1,18 @@
-<%= form_for @band do |form| %>
-  
-  
-  <% @people.each do |person| %>
-   <%= check_box_tag "band[person_ids][]", person.id %>
-   <%= person.name %>
-  <% end %>
+<div class="new-person">
+  <div class="musician-select">
+      <%= form_for @band do |form| %>
+        <% @people.each do |person| %>
+         <%= check_box_tag "band[person_ids][]", person.id %>
+         <%= person.name %>
+        <% end %>
+</div>
+<div class="person-field">
+  <div class="field">
+    <%= form.label :name  %>
+    <%= form.text_field :name %>
 
-  <%= form.label :name  %>
-  <%= form.text_field :name %>
-
-  <%= form.submit 'Submit' %>
-  
-<% end %>
+    <%= form.submit 'Submit' %>
+    
+    <% end %>
+  </div>
+</div>

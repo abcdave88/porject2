@@ -6,5 +6,8 @@ class SearchController < ApplicationController
     @bands = Band.all
   end
 
+  def post
+
+  end
 
 end
