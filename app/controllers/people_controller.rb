@@ -12,7 +12,7 @@ class PeopleController < ApplicationController
         end
       end
     end
-    
+    binding.pry
     render json: @person_instruments
   end
 
