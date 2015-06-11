@@ -1,8 +1,10 @@
 class SearchController < ApplicationController
 
   def find
-    @persons = Person.all 
+    @people = Person.all 
     @instruments = Instrument.all
     @bands = Band.all
   end
+
+
 end

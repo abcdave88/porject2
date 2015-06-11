@@ -8,24 +8,29 @@
 
 
 function findInfo(){
-  var query = this.options[this.selectedIndex].innerHTML; 
-  //console.log(query);
-  
-  // $.ajax({
-  //   type: 'GET', 
-  //   url: '/search/find' 
-  //   dataType: 'json',
-  //   data: {item: itemData}
-  // })done(function(data){
-  //   $.each(data, function(index, item){
-  //     appendSearchItem(item);
-  //     console.log('FUCK YOU!');
-  //   })
-  // })
+
+  // var query = this.options[this.selectedIndex].innerHTML; 
+   var query =  $('#q')[0].value;
+
+  $.ajax({
+    type: 'GET', 
+    url: '/people', 
+    dataType: 'json',
+    data: query
+  }).done(function(data){
+    console.log(data)
+    
+    // $.each(data, function(index, item){
+    //   // appendSearchItem(item);
+    //   console.log('FUCK YOU!');
+    // })
+  })
 };
 
 
 $(document).ready(function(){
-  $('#person_person_id').on('change', findInfo);
-  $('#instrument_instrument_id').on('change', findInfo);
+  $('.search-submit').on('click', function(e){
+    e.preventDefault();
+    findInfo();
+  })
 });

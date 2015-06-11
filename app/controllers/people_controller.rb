@@ -1,8 +1,22 @@
 class PeopleController < ApplicationController
 
-  # def index
-  #   @persons = Person.all 
-  # end
+  def index
+    # binding.pry
+    @persons = Person.all 
+    @query = params.first.first
+    @person_instruments = []
+    @persons.each do |person| 
+      person.instruments.each do |instrument|
+        if instrument.instrument_type == @query
+          @person_instruments.push(person)
+        end
+      end
+    end
+    
+    render json: @person_instruments
+  end
+
+
 
   def new
     @person = Person.new

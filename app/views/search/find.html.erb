@@ -1,12 +1,9 @@
 <h1>this is the search page</h1>
  
-  
-  <%= collection_select(:instrument, :instrument_id, Instrument.all, :id, :instrument_type) %>
-  
+<%= form_tag  %>
 
-  
-  <%= collection_select(:person, :person_id, Person.select(:location).uniq, :id, :location ) %>
-  
+<%=text_field_tag (:q) %>
 
-  <div class="results">
-  </div>
+<%= submit_tag 'Search', class: "search-submit" %>
+
+
