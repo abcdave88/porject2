@@ -8,11 +8,10 @@ function findInfo(){
     dataType: 'json'
   }).done(function(data){
     $.each(data, function(index, person) {
-      $('.results').append("<div>"+
-                              "<h2>"+
-                                person.name +
-                              "</h2>"+
-                            "</div>")
+   
+      $('.results').append("<div class='name'><h3>  ||   "+person.name+" </h3></div>");
+            $('.results').append("<div class='location'><h3> "+person.location+"  ||  </h3></div>");
+
     })
   })
 };
